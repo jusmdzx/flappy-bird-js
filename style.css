@@ -1,0 +1,57 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #70c5ce;
+    font-size: 24px;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #70c5ce;
+}
+
+/* Exibição da pontuação e tempo */
+#score-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#bird {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background-color: green;
+    bottom: 0;
+    right: 0;
+    animation: pipe-move 3s linear infinite;
+}
+
+.pipe.top {
+    bottom: auto;
+}
+
+@keyframes pipe-move {
+    from {
+        right: -60px;
+    }
+    to {
+        right: 100vw;
+    }
+}
